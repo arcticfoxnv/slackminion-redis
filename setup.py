@@ -1,5 +1,6 @@
 from setuptools import setup, find_packages
-from slackminion.plugins.state.state_redis import version
+
+from slackminion.plugins.state_redis import version
 
 setup(
         name='slackminion-redis',

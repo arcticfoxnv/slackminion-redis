@@ -2,8 +2,11 @@ import redis
 
 from slackminion.plugins.state import BaseStateHandler
 
-version = '0.1.0'
-commit = 'HEAD'
+from . import version
+try:
+    from . import commit
+except ImportError:
+    commit = 'HEAD'
 
 
 class RedisStateHandler(BaseStateHandler):
